@@ -9,7 +9,22 @@ import android.view.MenuItem
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 
+/**
+ * ListadoZonasPescaActivity es una clase que extiende de la clase AppCompatActivity
+ * en la que se define un listado de zonas de pesca
+ *
+ * @autor [Samuel Fernández Pérez]
+ * @versión 1.0
+ */
 class ListadoZonasPescaActivity : AppCompatActivity() {
+    /**
+     * Función que se encarga de crear la vista para mostrar un listado
+     * de zonas de pesca existentes. Este método inicializa una lista de zonas existentes,
+     * crea un adaptador personalizado para la lista y lo asigna al ListView correspondiente.
+     *
+     * @param SavedInstanceState es un objeto Bundle que se utiliza para almacenar el estado
+     * de la actividad en caso de que sea necesario restaurarla posteriormente.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listado_zonas_pesca)
@@ -55,13 +70,31 @@ class ListadoZonasPescaActivity : AppCompatActivity() {
             }
         }
     }
+    /**
+     * Esta función se llama cuando se selecciona un elemento del menú de opciones.
+     * En este caso, se verifica si el elemento seleccionado es el botón Home y se
+     * imprime un mensaje de información en el Log.
+     *
+     * @param item elemento seleccionado del menú de opciones.
+     * @return true si se ha gestionado correctamente la selección del elemento, false en caso contrario.
+     */
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home) {
             Log.i("Info", "Se ha hecho clic en el botón home")
         }
         return super.onOptionsItemSelected(item)
     }
-
+    /**
+     * Esta función uestra un mapa con la ubicación geográfica especificada utilizando
+     * una intención implícita.
+     *
+     * La anotación @SuppressLint se usa para suprimir advertencias sobre
+     * verificaciones de permisos faltantes, ya que la función se basa en
+     * una aplicación externa para manejar la intención y las verificaciones
+     * de permisos son realizado por el sistema Android cuando se lanza la intención.
+     *
+     * @param geoLocation El Uri que representa la ubicación geográfica para mostrar en el mapa.
+     */
     @SuppressLint("QueryPermissionsNeeded")
     fun showMap(geoLocation: Uri) {
         val intent = Intent(Intent.ACTION_VIEW).apply {
@@ -71,6 +104,11 @@ class ListadoZonasPescaActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+    /**
+     * Esta función anula el comportamiento predeterminado del botón Atrás cuando se presiona.
+     * De forma predeterminada, el botón Atrás cierra la actividad actual
+     * y vuelve a la anterior en la pila de actividades.
+     */
     override fun onBackPressed() {
     }
 }

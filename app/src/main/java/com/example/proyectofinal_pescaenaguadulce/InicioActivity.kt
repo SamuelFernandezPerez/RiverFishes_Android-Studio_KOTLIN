@@ -7,7 +7,17 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 
+/**
+ * Clase que representa la pantalla de inicio de la aplicación.
+ * Hereda de la clase [AppCompatActivity] de la librería de soporte de Android.
+ *
+ * @Autor [Samuel Fernández Pérez]
+ */
 class InicioActivity : AppCompatActivity() {
+    /**
+     * Función que se llama cuando se crea la actividad.
+     * @param objeto savedInstanceState [Bundle] que contiene el estado anterior de la actividad.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inicio)

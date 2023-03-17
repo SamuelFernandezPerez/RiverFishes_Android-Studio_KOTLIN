@@ -12,7 +12,23 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 
+/**
+ * Clase que representa la actividad principal de la aplicación. Esta actividad
+ * contiene la vista del menú principal de la aplicación, que permite al usuario
+ * navegar a otras partes de la aplicación.
+ * Hereda de la clase [AppCompatActivity] de la librería de soporte de Android.
+ *
+ * @author [Samuel Fernandez Pérez]
+ * @constructor Crea una instancia de la actividad principal del menú.
+ * */
 class MenuActivity : AppCompatActivity() {
+    /**
+     * Sobrescribe el comportamiento predeterminado de la creación de la actividad, establece
+     * el diseño, inicializa los elementos de la interfaz de usuario y configura sus escuchas
+     * de clics para iniciar otras actividades en respuesta a los eventos de clics.
+     *
+     * @param SavedInstanceState El estado de instancia guardado de la actividad.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
@@ -39,11 +55,25 @@ class MenuActivity : AppCompatActivity() {
             startActivity(i)
         }
     }
+    /**
+     * Anula el comportamiento predeterminado del menú de opciones para inflar el diseño del menú.
+     *
+     * @param menu El menú a inflar.
+     * @return Un valor booleano que indica si el menú se infló correctamente.
+     */
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater: MenuInflater = menuInflater
         inflater.inflate(R.menu.menu, menu)
         return true
     }
+    /**
+     * Anula el comportamiento predeterminado del menú de opciones para manejar
+     * la selección de elementos específicamente para cerrar la sesión del usuario
+     * y redirigirlo a la actividad de acceso.
+     *
+     * @param item El elemento de menú seleccionado.
+     * @return Un valor booleano que indica si se manejó el elemento de menú seleccionado.
+     */
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle item selection
         return when (item.itemId) {
@@ -56,6 +86,12 @@ class MenuActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+    /**
+     * Anula el comportamiento predeterminado del botón Atrás para mostrar un mensaje Toas
+     * indicando que el usuario necesita cerrar sesión para salir de la aplicación.
+     *
+     * @return void
+     */
     override fun onBackPressed() {
         val toastAlert = Toast.makeText(applicationContext, "Debes cerrar sesión para salir", Toast.LENGTH_LONG
         )

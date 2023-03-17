@@ -11,8 +11,26 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
+/**
+ * Clase para mostrar un listado de peces capturados por un usuario.
+ * Esta clase extiende de la clase AppCompatActivity y utiliza Firebase
+ *
+ *para obtener la lista de peces capturados por el usuario actual.
+ * También permite agregar nuevos peces capturados y editar o eliminar los existentes.
+ *
+ * @constructor Crea una instancia de la clase ListadoMisPecesActivity.
+ * @property pecesCapturados La lista de peces capturados por el usuario actual.
+ * @author [Samuel Fernández Pérez]
+ */
 class ListadoMisPecesActivity : AppCompatActivity() {
     val pecesCapturados = arrayListOf<PezCapturado>()
+    /**
+     * Función que se llama al crear la actividad.
+     * Se encarga de obtener la colección de peces capturados desde Firebase
+     * y configurar el ListView para mostrarlos.
+     *
+     * @param SavedInstanceState El estado de la instancia de la actividad.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listado_mis_peces)
@@ -24,6 +42,10 @@ class ListadoMisPecesActivity : AppCompatActivity() {
             startActivity(i)
         }
     }
+    /**
+     * Obtiene la lista de peces capturados de la base de datos
+     * y completa la vista de lista con los datos.
+     */
     @SuppressLint("CutPasteId")
     fun getPezCollection(){
         val listViewPecesCapturados = findViewById<ListView>(R.id.ListViewMisPeces)
@@ -65,6 +87,11 @@ class ListadoMisPecesActivity : AppCompatActivity() {
                 listViewMisPeces.emptyView = findViewById<TextView>(R.id.textSinPeces)
             }
     }
+    /**
+     * Esta función anula el comportamiento predeterminado del botón Atrás cuando se presiona.
+     * De forma predeterminada, el botón Atrás cierra la actividad actual
+     * y vuelve a la anterior en la pila de actividades.
+     */
     override fun onBackPressed() {
     }
 }

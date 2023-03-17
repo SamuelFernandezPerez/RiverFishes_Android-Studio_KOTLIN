@@ -6,7 +6,22 @@ import android.util.Log
 import android.view.MenuItem
 import android.widget.ListView
 
+/**
+ * ListadoPecesExistentesActivity es una clase que extiende de la clase AppCompatActivity
+ * en la que se define un listado de peces
+ *
+ * @author [Samuel Fernández Pérez]
+ * @version 1.0
+ */
 class ListadoPecesExistentesActivity : AppCompatActivity() {
+    /**
+     * Función que se encarga de crear la vista para mostrar un listado
+     * de peces existentes. Este método inicializa una lista de peces existentes, crea un
+     * adaptador personalizado para la lista y lo asigna al ListView correspondiente.
+     *
+     * @param SavedInstanceState es un objeto Bundle que se utiliza para almacenar el estado
+     * de la actividad en caso de que sea necesario restaurarla posteriormente.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listado_peces_existentes)
@@ -42,14 +57,25 @@ class ListadoPecesExistentesActivity : AppCompatActivity() {
         )
         listViewPecesExistentes.adapter = pecesExistentesArrayAdapter
     }
-
-
+    /**
+     * Este método se llama cuando se selecciona un elemento del menú de opciones.
+     * En este caso, se verifica si el elemento seleccionado es el botón Home y se
+     * imprime un mensaje de información en el Log.
+     *
+     * @param item elemento seleccionado del menú de opciones.
+     * @return true si se ha gestionado correctamente la selección del elemento, false en caso contrario.
+     */
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home) {
             Log.i("Info", "Se ha hecho clic en el botón home")
         }
         return super.onOptionsItemSelected(item)
     }
+    /**
+     * Esta función anula el comportamiento predeterminado del botón Atrás cuando se presiona.
+     * De forma predeterminada, el botón Atrás cierra la actividad actual
+     * y vuelve a la anterior en la pila de actividades.
+     */
     override fun onBackPressed() {
     }
 }
