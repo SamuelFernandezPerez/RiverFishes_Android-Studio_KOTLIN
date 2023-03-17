@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "953548384729",
+    "project_id": "river-fishes",
+    "storage_bucket": "river-fishes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:953548384729:android:4ba6df9db57b8fdb90d1c8",
+        "android_client_info": {
+          "package_name": "com.example.proyectofinal_pescaenaguadulce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "953548384729-pp8ha7oji53ppl9vu2cea2i1n24g659s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.proyectofinal_pescaenaguadulce",
+            "certificate_hash": "ef068598eb238ceb2ca90c9902798fbbf67c772e"
+          }
+        },
+        {
+          "client_id": "953548384729-hq279nskof6o4f75na120hhafbjr2n1c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBmi6FFyYkxNBLRE5wikAG3DCztd972_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "953548384729-hq279nskof6o4f75na120hhafbjr2n1c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

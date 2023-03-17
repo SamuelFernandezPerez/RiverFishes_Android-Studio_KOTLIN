@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccesoActivity"
+    android:id="@+id/mainContainer">
+
+    <ImageView
+        android:id="@+id/imageFondo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/fondo" />
+
+    <LinearLayout
+        android:id="@+id/datosContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/border"
+        tools:ignore="UselessParent">
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:hint="Introduzca su Email"
+            android:inputType="textEmailAddress"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:maxLength="40"/>
+
+        <EditText
+            android:id="@+id/editTextContraseña"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:textSize="20sp"
+            android:hint="Introduzca su Contraseña"
+            android:inputType="textPassword"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:maxLength="20"/>
+
+        <LinearLayout
+            android:id="@+id/buttonsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="40"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonRegistrar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="28sp"
+                android:textColor="@color/black"
+                android:text="REGISTRAR" />
+
+            <Button
+                android:id="@+id/buttonAcceder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="28sp"
+                android:textColor="@color/black"
+                android:text="ACCEDER" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

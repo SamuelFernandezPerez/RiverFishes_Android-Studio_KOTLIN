@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/accent"
+    android:id="@+id/MainContainer">
+
+
+    <TextView
+        android:id="@+id/textClase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@id/fondoBlanco"
+        android:text="Clase Pez"
+        android:textColor="#3c3c3c"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/textZona"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textClase"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/fondoBlanco"
+        android:text="Zona pesca"
+        android:textColor="@color/primary_dark"
+        android:textSize="22sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:id="@+id/fondoBlanco"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/imagePez"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            app:srcCompat="@drawable/ic_launcher_background" />
+    </RelativeLayout>
+
+</RelativeLayout>

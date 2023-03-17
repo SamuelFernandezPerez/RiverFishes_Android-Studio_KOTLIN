@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/accent"
+    tools:context=".AgregarPezCapturadoActivity"
+    android:id="@+id/MainContainer">
+
+    <LinearLayout
+        android:id="@+id/linearDatosCaptura"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="35"
+        android:background="@drawable/border3"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearCaptura"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageCaptura"
+                android:layout_width="0dp"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                app:srcCompat="@drawable/pescar" />
+
+            <TextView
+                android:id="@+id/textCaptura"
+                android:layout_width="0dp"
+                android:layout_weight="33"
+                android:textSize="20sp"
+                android:textColor="@color/primary_dark"
+
+                android:layout_height="wrap_content"
+                android:text="Captura"
+                android:layout_gravity="center"
+                tools:ignore="NestedWeights" />
+
+            <ImageView
+                android:id="@+id/imageClase"
+                android:layout_width="0dp"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                app:srcCompat="@drawable/fish" />
+
+            <EditText
+                android:id="@+id/editTextClase"
+                android:layout_width="0dp"
+                android:layout_weight="55"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:maxLength="20"
+                android:layout_gravity="center"
+                android:inputType="textPersonName"
+                android:hint="Clase / Tipo" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearPeso"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textPesoInvisible"
+                android:layout_width="0dp"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="39"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:text="" />
+            <ImageView
+                android:id="@+id/imagePeso"
+                android:layout_width="0dp"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                app:srcCompat="@drawable/peso" />
+
+            <RelativeLayout
+                android:id="@+id/RelativePeso"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="56">
+
+                <EditText
+                    android:id="@+id/editTextPeso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Peso"
+                    android:inputType="numberDecimal"
+                    android:maxLength="4"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewKg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Kg"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearCebo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textCeboInvisible"
+                android:layout_width="0dp"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="39"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/imageCebo"
+                android:layout_width="0dp"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                app:srcCompat="@drawable/anzuelo" />
+
+            <EditText
+                android:id="@+id/editTextCebo"
+                android:layout_width="0dp"
+                android:layout_weight="55"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textSize="20sp"
+                android:maxLength="20"
+                android:layout_gravity="center"
+                android:hint="Cebo utilizado" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearDatosGenero"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="@drawable/border4"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/linearGenero"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageGenero"
+                android:layout_width="0dp"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                app:srcCompat="@drawable/genero" />
+
+            <TextView
+                android:id="@+id/textGenero"
+                android:layout_width="0dp"
+                android:layout_weight="40"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/primary_dark"
+                android:layout_height="wrap_content"
+                android:text="Género" />
+
+            <Spinner
+                android:id="@+id/spinnerGenero"
+                android:layout_width="0dp"
+                android:layout_weight="54"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearDatosUbicacion"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="45"
+        android:background="@drawable/border3"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/linearUbicacion"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageUbicacion"
+                android:layout_width="0dp"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                app:srcCompat="@drawable/ubicacion" />
+
+            <TextView
+                android:id="@+id/textUbicacion"
+                android:layout_width="0dp"
+                android:layout_weight="33"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/primary_dark"
+                android:layout_height="wrap_content"
+                android:text="Ubicación" />
+
+            <ImageView
+                android:id="@+id/imageZona"
+                android:layout_width="0dp"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                app:srcCompat="@drawable/zona" />
+
+            <EditText
+                android:id="@+id/editTextZona"
+                android:layout_width="0dp"
+                android:layout_weight="55"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:maxLength="30"
+                android:layout_gravity="center"
+                android:inputType="textPersonName"
+                android:hint="Zona" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLugar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textLugarInvisible"
+                android:layout_width="0dp"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="39"
+                android:textSize="20sp"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/imageLugar"
+                android:layout_width="0dp"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                app:srcCompat="@drawable/lugar" />
+
+            <EditText
+                android:id="@+id/editTextLugar"
+                android:layout_width="0dp"
+                android:layout_weight="55"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textSize="20sp"
+                android:maxLength="30"
+                android:layout_gravity="center"
+                android:hint="Lugar" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearClima"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textClimaInvisible"
+                android:layout_width="0dp"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="39"
+                android:textSize="20sp"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/imageClima"
+                android:layout_width="0dp"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                app:srcCompat="@drawable/clima" />
+
+            <EditText
+                android:id="@+id/editTextClima"
+                android:layout_width="0dp"
+                android:layout_weight="55"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textSize="20sp"
+                android:maxLength="20"
+                android:layout_gravity="center"
+                android:hint="Clima" />
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/relativeButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/buttonAgregar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                android:text="NUEVO"
+                android:textSize="28sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

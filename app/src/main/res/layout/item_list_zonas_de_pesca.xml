@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/accent"
+    android:id="@+id/MainContainer">
+
+
+    <TextView
+        android:id="@+id/textNombreZona"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@id/imageZona"
+        android:text="Nombre zona"
+        android:textColor="#3c3c3c"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/textLugarZona"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textNombreZona"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/imageZona"
+        android:text="Lugar"
+        android:textColor="@color/primary_dark"
+        android:textSize="22sp" />
+
+    <ImageView
+        android:id="@+id/imageZona"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/imageMap"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        app:srcCompat="@drawable/map" />
+
+</RelativeLayout>

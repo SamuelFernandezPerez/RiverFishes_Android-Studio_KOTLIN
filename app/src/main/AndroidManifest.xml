@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.proyectofinal_pescaenaguadulce">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ProyectoFinal_PescaEnAguaDulce">
+        <activity
+            android:name=".EdicionMisPecesActivity"
+            android:exported="false"
+            android:label="Editar pez capturado"
+            android:parentActivityName=".ListadoMisPecesActivity" />
+        <activity
+            android:name=".AgregarPezCapturadoActivity"
+            android:exported="false"
+            android:label="Añadir pez capturado"
+            android:parentActivityName=".ListadoMisPecesActivity" />
+        <activity
+            android:name=".ListadoMisPecesActivity"
+            android:exported="false"
+            android:label="Mis peces capturados"
+            android:parentActivityName=".MenuActivity" />
+        <activity
+            android:name=".ListadoZonasPescaActivity"
+            android:exported="false"
+            android:label="Zonas de pesca"
+            android:parentActivityName=".MenuActivity" />
+        <activity
+            android:name=".ListadoPecesExistentesActivity"
+            android:exported="false"
+            android:label="Peces de España"
+            android:parentActivityName=".MenuActivity" />
+        <activity
+            android:name=".MenuActivity"
+            android:exported="false"
+            android:label="Menú" />
+        <activity
+            android:name=".AccesoActivity"
+            android:exported="false"
+            android:label="Acceso"
+            android:parentActivityName=".InicioActivity"/>
+        <activity
+            android:name=".InicioActivity"
+            android:exported="true"
+            android:label="Inicio">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
