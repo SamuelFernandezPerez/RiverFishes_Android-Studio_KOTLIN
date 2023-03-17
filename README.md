@@ -5,3 +5,7 @@ nuestras propias capturas.
 
 ![image](https://user-images.githubusercontent.com/112828488/226059431-3fcfbefd-f62f-4ae6-8fa2-cc2fb800596a.png)
 
+Esta aplicación ha sido creada con Android Studio.
+Versión: Android Studio Electric Eel | 2022.1.1 Patch 2
+Lenguaje utilizado: Kotlin
+
